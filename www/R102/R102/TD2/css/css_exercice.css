@@ -1,9 +1,0 @@
-/* selectionne les éléments dans le 3eme li consécutif et dans la classe em  */
-li + li + li em{
-    background-color: red
-}
-
-/* selectionne les éléments de la classe em dont le parent direct est li fils de ul et fils de body  */
-body > ul > li > em {
-    background-color: cyan
-}
