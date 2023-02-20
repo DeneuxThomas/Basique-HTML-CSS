@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Partie obligatoire -->
+    <meta charset='utf-8' />
+    <title>TD4</title>
+    <!-- Partie facultative -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content='TD4' />
+    <meta name='author' content='T. Deneux' />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" /> </head>
+
+<body>
+    <header>
+        <h1>TD4</h1> </header>
+    <main>
+        <h2>I Les tableaux</h2>
+        <ol>
+            <li>
+                <table>
+                    <!-- Légende -->
+                    <caption> Annuaire des membres </caption>
+                    <!-- Entête -->
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Date de naissance</th>
+                            <th>Téléphone</th>
+                        </tr>
+                    </thead>
+                    <!-- Corps du tableau -->
+                    <tbody>
+                        <tr>
+                            <td>Martin</td>
+                            <td>Louis</td>
+                            <td>05/12/1960</td>
+                            <td>0610234578</td>
+                        </tr>
+                        <tr>
+                            <td>Le Douec</td>
+                            <td>Julie</td>
+                            <td>18/05/1975</td>
+                            <td>0610247013</td>
+                        </tr>
+                        <tr>
+                            <td>Jolivet</td>
+                            <td>Leo</td>
+                            <td>01/03/1982</td>
+                            <td>0745516021</td>
+                        </tr>
+                        <tr>
+                            <td>Merzougui</td>
+                            <td>Aïssa</td>
+                            <td>23/02/1962</td>
+                            <td>0685417844</td>
+                        </tr>
+                        <tr>
+                            <td>Pinto</td>
+                            <td>Jose</td>
+                            <td>18/11/1976</td>
+                            <td>0647814102</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Code CSS :</p> <pre> <code>   table {
+        background: white;
+        /* pour mettre la légende en bas */
+        caption-side: bottom;
+        border-radius: 0.5em;
+        box-shadow: 4px 4px 0px #b4ac9c;
+    }
+    
+    table > caption {
+        margin-top: 0.9em;
+        /* police particulière */
+        font-variant: small-caps;
+        color: gray;
+    }
+    
+    table > thead {
+        color: aliceblue;
+        text-align: center;
+    }
+    
+    table > thead > tr {
+        background-color: salmon;
+    }
+    
+    table > thead > tr > th:first-child {
+        border-radius: 0.5em 0 0 0;
+    }
+    
+    table > thead > tr > th:last-child {
+        border-radius: 0 0.5em 0 0;
+    }
+    
+    table > thead > tr > th {
+        padding: 3px;
+    }
+    /* selectionne seulement la première lettre */
+    
+    table > thead > tr > th::first-letter {
+        color: #ffe8c9;
+    }
+    
+    table > tbody > tr {
+        color: black;
+    }
+    
+    table > tbody > tr {
+        text-align: center;
+    }
+    
+    table > tbody > tr > td:nth-child(1) {
+    /* grosseur du texte (caractère de plus en plus gars */
+        font-weight: bold;
+        font-variant: small-caps;
+    }
+    
+    table > tbody > tr > td:nth-child(2) {
+        text-align: left;
+        font-style: oblique;
+    }
+    
+    table > tbody > tr:nth-child(odd) {
+        background-color: #f8ebd7;
+    }
+    
+    table > tbody > tr:nth-child(even) {
+        background-color: #fff8dc;
+    }
+    
+    table > tbody > tr > td:nth-child(4)::before {
+        content: "✆ ";
+        color: #e9cea8;
+        font-size: 1.5em;
+    }
+    
+    table > tbody > tr > td:first-child::first-letter {
+        color: #b42d2c;
+    }
+    
+    table > tbody > tr > td {
+        padding: 0 5px;
+    }
+    
+    table > tbody > tr > td:last-child {
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }</code></pre> </li>
+            <li><em>Au lieu d'utiliser les pseudo-classes :first-child, :last-child et :nth-child(), on aurait pu utiliser les classes :first-of-type, :last-of-type et :nth-of-type().Quelle est la différence entre ces pseudo-classes ?</em>
+                <p>Le nth-of-type va sélectionner la n ème valeur du type particulier qu'on a mis avant les ":" alors que nth-child va pas se préoccuper du type mais va seulement prendre la n ème valeur se trouvant dans la même itération </p>
+            </li>
+            <li><em>Quel serait l'effet de li ul:first-of-type {color: red;} ? Et de li ul:first-child {color: red;} ?</em>
+                <p>li ul:first-of-type {color: red;} va selectionné et colorier en rouge tout le premier type li du ul alors que ul:first-child {color: red;} va sélectionner ne va rien électionner</p>
+            </li>
+            <li><em>Reproduire le tableau de couleur :</em>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">300x50</td>
+                            <td rowspan="4">100x200</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="2">200x100</td>
+                            <td>100x50</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>100x50</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">100x100</td>
+                            <td rowspan="2" colspan="2">200x100</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>100x50</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+        <h2>Les balises multimédia</h2>
+        <h3>La balise video</h3>
+        <ol>
+            <li><em>Testez l'insertion d'une vidéo extérieure avec ce lien, par exemple celle-ci.</em>
+                <div>
+                    <video controls preload="auto" poster="img/upload_fed1091b34dcf8203c0729c4faa62315.png" width="300">
+                        <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4">
+                        <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.webm">
+                        <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.ogv"> </video>
+                </div>
+            </li>
+        </ol>
+        <h2>IV Les images sectorisées</h2> <img id="imagesectorisees" src="img/carte_IUT.png" usemap="#image-map" alt="carte IUT">
+        <map name="image-map">
+            <area target="_blank" alt="Département Informatique" title="Département Informatique" href="https://iut.univ-cotedazur.fr/" coords="174,326,255,361,182,523,100,486" shape="poly">
+            <area target="_blank" alt="Département GEA" title="Département GEA" href="https://iut.univ-cotedazur.fr/" coords="296,467,406,223,494,263,385,507" shape="poly">
+            <area target="_blank" alt="Département TC" title="Département TC" href="https://iut.univ-cotedazur.fr/" coords="538,353,619,389,685,251,599,212" shape="poly">
+            <area target="_blank" alt="Département GEII" title="Département GEII" href="https://iut.univ-cotedazur.fr/" coords="687,386,722,311,952,417,943,436,998,466,917,640,854,612,841,637,721,581,757,503,880,560,910,494,771,430,720,536,709,529,757,421" shape="poly">
+            <area target="_blank" alt="Cafétéria Crous" title="Cafétéria Crous" href="https://www.crous-nice.fr/restaurant/cafeteria-iut/?lang=fr" coords="467,627,514,557,654,650,607,720" shape="poly"> </map>
+        <h2>V Les formulaires</h2>
+        <ol>
+            <li><em>Créez un formulaire semblable à celui-ci (les champs avec * sont requis).</em>
+                <form name="MonFormulaire">
+                    <div>
+                        <fieldset>
+                            <p><label for="nom"></label>Nom<abbr title="Ce champ est obligatoire">(*)</abbr>
+                            </p>
+                            <input type="text" id="nom" name="nom" required> </fieldset>
+                        <fieldset>
+                            <p><label for="courriel">Courriel<abbr title="Ce champ est obligatoire">(*)</abbr></label>
+                            </p>
+                            <input type="email" id="courriel" name="courriel" required> </fieldset>
+                        <fieldset>
+                            <p><label for="siteweb">Site web</label>
+                            </p>
+                            <input type="url" id="siteweb" name="siteweb"> </fieldset>
+                        <fieldset>
+                            <p><label for="satisfaction">Satisfaction<abbr title="Ce champ est obligatoire">(*)</abbr></label>
+                            </p>
+                            <div id="all_curseur">-
+                                <div id="curseur">
+                                    <input type="range" class="slider" id="satisfaction" name="satisfaction" min="0" max="10" step="1">
+                                </div> <abbr>+</abbr></div>
+                        </fieldset>
+                        <fieldset>
+                            <p><label for="commentaire">Commentaire<abbr title="Ce champ est obligatoire">(*)</abbr></label>
+                            </p>
+                            <textarea id="commentaire" name="commentaire" rows="5" cols="30" required></textarea>
+                        </fieldset>
+                    </div>
+                    <fieldset id="comm">
+                        <label for="poster"></label>
+                        <input type="submit" id="poster" value="Poster un commentaire"> </fieldset>
+                </form>
+            </li>
+        </ol>
+        <a href="../index.html" target='_self'>Lien vers le menu des TD</a>
+    </main>
+    <footer>Thomas DENEUX</footer>
+</body>
+
+</html>

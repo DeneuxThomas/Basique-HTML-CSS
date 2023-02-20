@@ -1,0 +1,83 @@
+body {
+    /* On change la couleur de fond */
+    background-color: #BFEDFF;
+}
+
+h1 {
+    /* On change la couleur de fond */
+    background-color: #DCF5FF;
+    /* On veut mettre un cadre coloré au titre. */
+    border-color: darkblue;
+    /* Par défaut, le cadre est invisible ; on le rend visible. */
+    border-style: hidden;
+    /* Cadre arrondis */
+    border-radius: 20px;
+    /* On centre le texte dans le cadre. */
+    text-align: center;
+    /* Change la couleur */
+    color: midnightblue;
+    /* change la police */
+    font-family: Tahoma;
+    /* Va prendre 80% de l'écran */
+    width: 80%;
+    /* centrer horizontalemnt */
+    margin: 20px auto;
+    /* Augmente les marges vertical intérieur */
+    padding: 5px 0px;
+    /* l'espace entre les lettres */
+    letter-spacing: .1em;
+    /* ombre sur le texte */
+    text-shadow: 1px 0 30px;
+    /* ombre de la box */
+    box-shadow: black 1px 0 15px;
+}
+
+img {
+    width: 45%;
+}
+
+div:nth-child(1) > img:nth-child(1) {
+    /* forme de la box */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 82%, 0 82%);
+    margin-top: 3em;
+    margin-left: 1.85em;
+}
+
+div:nth-child(1) > img:nth-child(2) {
+    /* forme de la box */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
+    float: right;
+    margin-top: 3em;
+    margin-right: 1.85em;
+}
+
+div:nth-child(2) > img:nth-child(1) {
+    /* forme de la box */
+    clip-path: circle(43% at 43% 46%);
+    margin-top: -2.5em;
+    margin-left: 1.85em;
+}
+
+div:nth-child(2) > img:nth-child(2) {
+    /* forme de la box */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 85%, 75% 100%, 50% 85%, 0 85%);
+    float: right;
+    margin-right: 1.85em;
+}
+
+[href="/R102/TD3/index.html"] {
+    text-decoration: none;
+}
+
+a {
+    float: right;
+    background-color: darkblue;
+    color: white;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+footer {
+    /* Définit la marges basse extérieure */
+    margin-top: 10px;
+}

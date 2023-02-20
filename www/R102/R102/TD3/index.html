@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Partie obligatoire -->
+    <meta charset='utf-8' />
+    <title>TD3</title>
+    <!-- Partie facultative -->
+    <meta name='description' content='TD3' />
+    <meta name='author' content='T. Deneux' />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" /> </head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../TD1/index.html" target='_self'>TD1</a><span class="infobulle">Introduction à HTML</span></li>
+                <li><a href="../TD2/index.html" target='_self'>TD2</a><span class="infobulle">Introduction à CSS</span></li>
+                <li><a href="../TD3/index.html" target='_self'>TD3</a><span class="infobulle">La mise en page avec CSS</span></li>
+                <li><a href="../a_propos.html" target='_self'>À propos</a><span class="infobulle">coucou</span></li>
+            </ul>
+        </nav>
+        <h1>TD3</h1> </header>
+    <main>
+        <h2>I Le modèle de boîte</h2>
+        <h3>I.2 Principes de base d'un traitement de texte</h3>
+        <ol>
+            <li><em>Il y a cependant une différence notable, dès l'origine, entre un traitement de texte classique et un moteur de rendu HTML : c'est la notion de page. Quelle est la différence ? Quelles en sont les conséquences ? (Créez un fichier web/TD3/td3.html pour répondre).</em>
+                <p>La différence entre un traitement classique et un moteur de rendu HTML est que le rendu va fonctionne par ligne et se dirige celon l'axe principal. Il va creer une boîte par caractère puis par suite de caractère séparent par un espace (un mot) enfin il créer une boîte de toute cette ligne et se déplace d'un sur l'axe secondaire et refais la même chose sachant qu'il peut regrouper ces lignes pour créer un paragraphe et donc un nouvelle boîte par dessus. En tout il y a 4 boîtes qui se susperposent. Le traitement classique lui va juste créer une boîte pour chaque caractère. L'avantage du rendu css c'est qu'il va pouvoir des boîtes plus facilement car mieux agencé (il peut déplcer tout une ligne ou un mot au lieu de le faire caractère par caractère).</p>
+            </li>
+        </ol>
+        <h3>I.4 Marges et bordures</h3>
+        <ol>
+            <li><em>Si j'écris la règle CSS suivante : que va-t-il se passer (en supposant que h1 ne soit pas ciblé par une autre règle) ? Et pourquoi ?</em>
+                <p>Il ne rien se passer car les borders ne sont pas affichées donc invisible</p>
+            </li>
+            <li><em>Quels avantages y a-t-il à utiliser une taille absolue ? Une taille relative ?</em>
+                <p>Les taille absolue va permettre à un de mettre la balise à une taille fixe qui sera la même peut importe le support (ordinateur, téléphone...) alors que la taille relative va s'adapter et sera proportionnel à la taille de l'écran.</p>
+            </li>
+            <li><em>À quoi correspond l'unité em ? Et la nouvelle unité rem ?</em>
+                <p>L'unité em est simplement la taille de la police de caractères et donc si d'autres éléments utilisent l'unité em, elle va dépendre de la police de caractère. D'après le site W3C <q>Le rem (pour "root em") est la taille de la police de caractères dans l'élément racine du document. Contrairement au em, qui peut être différent pour chaque élément, le rem est constant tout au long du document.</q></p>
+            </li>
+            <li><em>Expliquez le principe des nouvelles unités vh et vw et leur intérêt.</em>
+                <p>Le vw équivaut à 1/100e de la largeur de la fenêtre et le vh équivaut à 1/100e de sa hauteur. Ce qui peut être utile si on veut spécifier des tailles relatives à la fenêtre du lecteur.</p>
+            </li>
+        </ol>
+        <h3>I.5 Changer de type de boîte</h3>
+        <ol>
+            <li><em>Créez dans un fichier TD3/galerie.html une galerie de photos, puis mettez un lien vers cette galerie dans TD3/index.html.</em>
+                <p><a href="../TD3/galerie.html" target='_self'>Lien_vers_la_galerie</a></p>
+            </li>
+            <li><em>Modifiez la page td3.html pour avoir en haut de la page un menu horizontal permettant d'accéder aux différents TD et à la page a_propos.html.</em> </li>
+        </ol> <a href="../index.html" target='_self'>Lien_vers_le_menu_des_TD</a> </main>
+    <footer>Thomas DENEUX</footer>
+</body>
+
+</html>

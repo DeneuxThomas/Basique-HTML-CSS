@@ -1,0 +1,129 @@
+main {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to top, grey 30%, #e1e8f2 30% 100%);
+    animation: ciel 1s linear infinite;
+}
+
+#voiture {
+    position: relative;
+    top: 18em;
+    left: 0em;
+    width: 25em;
+    height: 18em;
+    animation: voiture 5s linear infinite;
+}
+
+#haut {
+    /*taille et positionnement*/
+    width: 11em;
+    height: 4.3em;
+    transform: skew(8deg, 0deg);
+    position: relative;
+    top: 12%;
+    left: 25%;
+    /*bordures*/
+    border-left-style: solid;
+    border-top-style: solid;
+    border-color: red;
+    border-width: 0.3em;
+    border-radius: 1em;
+    border-top-right-radius: 1.5em;
+    /*couleur*/
+    background: linear-gradient(90deg, darkblue, black);
+}
+
+#haut > div:first-child {
+    background-color: red;
+    padding: .3em;
+    transform: rotate(90deg);
+    width: 4.5em;
+    position: relative;
+    top: 45%;
+    left: 0;
+}
+
+#haut > div:last-child {
+    background-color: red;
+    padding: .3em;
+    transform: rotate(90deg);
+    width: 4.5em;
+    position: relative;
+    top: 33%;
+    left: 48%;
+}
+
+#bas {
+    position: relative;
+    top: 5%;
+    left: 18%;
+    width: 15em;
+    padding: 2.1em;
+    border-radius: 1.5em 3.5em 1.5em .7em;
+    background: linear-gradient(red 10%, white 10% 15%, yellow 11% 20%, red 30% 95%);
+}
+
+.roue {
+    border-style: solid;
+    border-width: 0.4em;
+    border-radius: 50%;
+    height: 1.4em;
+    width: 1.4em;
+    background-color: orange;
+    position: relative;
+    padding: 0.4em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    animation: roue 1s linear infinite;
+}
+
+#r1 {
+    position: relative;
+    left: 25%;
+    bottom: 2%;
+}
+
+#r2 {
+    position: relative;
+    bottom: 28%;
+    left: 70%;
+}
+
+footer {
+    padding: .5em;
+    position: relative;
+    bottom: 3.5em;
+    left: 1em;
+    background: linear-gradient(90deg, white 5%, grey 5% 10%, white 10% 15%, grey 15% 20%, white 20% 25%, grey 25% 30%, white 30% 35%, grey 35% 40%, white 40% 45%, grey 45% 50%, white 50% 55%, grey 55% 60%, white 60% 65%, grey 65% 70%, white 70% 75%, grey 75% 80%, white 80% 85%, grey 85% 90%, white 90% 95%, grey 95% 100%);
+}
+
+@keyframes roue {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ciel {
+  from {
+    background-color:linear-gradient(to top, grey 30%, aliceblue 30% 100%);
+  }
+  to {
+    background-color:linear-gradient(to top, grey 30%, #115 30% 100%);
+  }
+}
+
+@keyframes voiture {
+  from {
+    transform: translate(-30vw);
+  }
+  to {
+    transform: translate(100vw);
+  }
+}

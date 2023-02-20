@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Partie obligatoire -->
+    <meta charset='utf-8' />
+    <title>TD5</title>
+    <!-- Partie facultative -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content='TD5' />
+    <meta name='author' content='T. Deneux' />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" /></head>
+
+<body>
+    <header>
+        <h1>TD5</h1> </header>
+    <main>
+        <h2>I Réactivité : les requêtes media</h2>
+        <h3>I.5 Propriétés courantes</h3>
+        <ol>
+            <li><em>Quelle requête média permet de sélectionner les supports ayant une résolution d'au moins 150dpi et une hauteur d'écran comprise entre 500 et 800px, sauf si le ratio largeur/hauteur est inférieure à 16/9, ou alors l'impression en mode paysage?</em>
+                <p>La requête est :
+                    <br> @media screen (min-resolution: 150dpi) and (min-height: 300px) and not screen (max-aspect-ratio: 16/9) or print (orientation :portrait) </p>
+            </li>
+        </ol>
+        <h3>I.6 Un exemple récapitulatif</h3>
+        <ol>
+            <li><em>Testez par vous-même en ouvrant cette page et en redimensionnant la fenêtre. Quelles stratégies ont été utilisées pour s'adapter ?</em>
+                <p>Sur la page quand on raccourcie la taille de la page à une taille particulière (quand il ne peux plus afficher 4 images sur la même ligne) alors il déplace le menu au niveau du titre en vertical et le met en rouge.</p>
+            </li>
+        </ol>
+        <h2>III Mais que fait la police ?</h2>
+        <h3>III.2 Intégrer sa police au site web</h3>
+        <ol>
+            <li><em>Quelles familles de police sont utilisées sur cette page web, et où ?</em>
+                <p>Sur la page le grand titre du TD est en serif sinon le reste sont en sans-serif car plus lisible</p>
+            </li>
+            <li><em>Utilisez au moins une police personnalisée pour les titres principaux de vos TD.</em></li>
+        </ol>
+        <h2>IV Dégradés et motifs</h2>
+        <h3>IV.4 Créer des motifs complexes</h3>
+        <ol>
+            <li><em> Créez dans votre feuille td.css un motif de fond avec des rayures obliques et/ou des pois, que vous appliquerez à votre body de manière à ce qu'il s'affiche de part et d'autre du main.</em></li>
+        </ol>
+        <h2>V Transformations et animations </h2>
+        <h3>V.1 Les transformation CSS</h3>
+        <ol>
+            <li><em>Transformez cette page HTML pour obtenir le résultat suivant :</em>
+                <p> <a href="exercice.html" target='_self'>Lien vers le résultat</a></p>
+            </li>
+            <li><em>Cette image a été créée uniquement avec du code HTML+CSS : Saurez-vous la reproduire simplement en ajoutant des règles CSS au code HTML suivant ? Et recréez l'animation suivante</em>
+                <p><a href="exercice2.html" target='_self'>Lien vers le résultat de la voiture</a></p>
+            </li>
+        </ol>
+        <h3>V.2 Animer vos pages</h3>
+        <ol>
+            <li><em>Animez le CSS suivant :</em>
+                <p><a href="exo.html" target='_self'>Lien vers le résultat de exo</a></p>
+            </li>
+        </ol><a href="../index.html" target='_self'>Lien vers le menu des TD</a> </main>
+    <footer>Thomas DENEUX</footer>
+</body>
+
+</html>

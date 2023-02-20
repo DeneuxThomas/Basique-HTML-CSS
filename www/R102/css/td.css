@@ -1,0 +1,691 @@
+@font-face {
+    font-family: "Blacklisted";
+    src: url("../fonts/Blacklisted.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: repeating-linear-gradient(45deg, black, black 35px, 0, #110027 70px);
+}
+
+main {
+    /* Le main mettre la couleur de fond à 80% de la largeur de la page avec un minimum de 500px de large et un maximum de 1000px*/
+    background-color: #110027;
+    /* Va prendre 80% de l'écran avec une largeur minimal de 500 pixels à 1000 pixels */
+    min-width: 500px;
+    max-width: 1000px;
+    width: 80%;
+    /* Ajoute un cadre invisible */
+    border-style: hidden;
+    /* Cadre arrondis */
+    border-radius: 15px;
+    /* Définit les marges gauche et basse intérieur */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+p {
+    /* On met la couleur au paragraphe */
+    color: #87CEFA;
+    /* Définit des 4 marges extérieurse */
+    margin: 10px;
+}
+
+h1 {
+    background-color: black;
+    /* On veut mettre un cadre coloré au titre. */
+    border-color: darkviolet;
+    /* Par défaut, le cadre est invisible ; on le rend visible. */
+    border-style: double;
+    /* Cadre arrondis */
+    border-radius: 10px;
+    /* On centre le texte dans le cadre. */
+    text-align: center;
+    /* Change la couleur */
+    color: lavender;
+    /* Va prendre 80% de l'écran */
+    width: 80%;
+    /* centrer horizontalemnt */
+    margin: 0 auto;
+    /* Une marge manimale horizontal de 20px */
+    max-width: calc(100% - 40px);
+    font-family: "Blacklisted", sans-serif;
+}
+
+
+/* Change la couleur du titre quand on le survole avec la souris*/
+
+h1:hover {
+    color: red;
+}
+
+h2 {
+    /* On change la couleur des sous-titres  */
+    color: #FF007D;
+    /* Règle l'espace au dessus dans la marge intérieure des titre h2 */
+    padding-top: 15px;
+    /* souligne le texte */
+    text-decoration: underline;
+    /* modifie l'espace entre le texte et le soulignement*/
+    text-underline-offset: 1px;
+}
+
+h3 {
+    /* On change la couleur des sous-sous-titre */
+    color: cornflowerblue;
+}
+
+main > div > h3 {
+    /* Centre le texte */
+    text-align: center;
+    /* Change la couleur */
+    color: #87CEFA;
+    /* Définit la marges haute intérieur */
+    padding-top: 35px;
+    /* Change la taille du texte */
+    font-size: 25px;
+}
+
+ul {
+    /* On change de couleur les listes  */
+    color: #FAEAFF;
+}
+
+em {
+    /* On change la couleur dans écriture en italique  */
+    color: white;
+}
+
+ol {
+    /* On change de couleur la numérotation */
+    color: darkviolet;
+    /* Définition des 4 marges extérieurse */
+    margin: 10px;
+}
+
+footer {
+    /* On change la couleur du bas de page */
+    color: darkviolet;
+}
+
+pre {
+    /* On change la couleur du pre code */
+    color: darkorange;
+    /* Indication sur la façon de gérer le dépassement d'une ligne et des sauts de lignes */
+    white-space: pre-wrap;
+}
+
+[href="../TD2/code_exercice.html"] {
+    color: burlywood;
+    text-decoration: none;
+}
+
+[href="exercice.html"] {
+    color: burlywood;
+    text-decoration: none;
+}
+
+[href="exercice2.html"] {
+    color: burlywood;
+    text-decoration: none;
+}
+
+[href="exo.html"] {
+    color: burlywood;
+    text-decoration: none;
+}
+
+
+/* Les éléments <a> avec un href qui correspond sont vert */
+
+[href="https://www.google.fr/"] {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+
+/* Les éléments <a> avec un href qui correspond sont rose  */
+
+[href*="../R102/index.html"] {
+    color: pink;
+    text-decoration: none;
+}
+
+[href*="../index.html"] {
+    color: pink;
+    text-decoration: none;
+}
+
+[href="TD1/index.html"] {
+    color: skyblue;
+}
+
+[href="TD2/index.html"] {
+    color: cyan;
+}
+
+[href="TD3/index.html"] {
+    color: greenyellow;
+}
+
+[href="TD4/index.html"] {
+    color: seagreen;
+}
+
+[href="TD5/index.html"] {
+    color: darkgreen;
+}
+
+[href="a_propos.html"] {
+    color: lightcoral;
+}
+
+[href="../TD3/galerie.html"] {
+    color: darkred;
+    text-decoration: none;
+}
+
+[href="../TD1/index.html"] {
+    color: aqua;
+    text-decoration: none;
+}
+
+li > [href="../TD1/index.html"] {
+    color: black;
+}
+
+[href="../a_propos.html"] {
+    color: aquamarine;
+    text-decoration: none;
+}
+
+li > [href="../a_propos.html"] {
+    color: black;
+}
+
+
+/* Les éléments <a> avec un 
+href qui correspond sont rouge */
+
+[href*="thomas.deneux@etu.unice.fr"] {
+    color: red;
+    text-decoration: none;
+}
+
+
+/* Met dans les citations avant et apres des guillemets et les colors en rose */
+
+q::after {
+    content: " »";
+    color: hotpink;
+}
+
+q::before {
+    content: "« ";
+    color: hotpink;
+}
+
+
+/* Color le fond d'une citation */
+
+q {
+    background-color: darkslateblue;
+}
+
+footer {
+    /* Définit la marges basse extérieure */
+    margin-top: 10px;
+}
+
+li + li > img {
+    /* Cadre arrondis */
+    border-radius: 15px;
+    /* On change de modèle de boîte. */
+    display: block;
+    /* On centre la boîte. */
+    margin: auto;
+    box-shadow: 12px 7px 5px #380060;
+}
+
+h1 + div + img {
+    /* Cadre arrondis */
+    border-radius: 15px;
+    /* On change de modèle de boîte. */
+    display: block;
+    /* On centre la boîte. */
+    margin: auto;
+    box-shadow: 12px 7px 5px #380060;
+}
+
+main > ol > li > img {
+    /* Sort l'image du flux et la met à droite */
+    float: right;
+}
+
+main > ol > li + li > p + p {
+    text-align: right;
+    clear: right;
+    color: red;
+}
+
+main > ul > li {
+    display: block;
+    padding-bottom: 4px;
+}
+
+main > ul > li > a {
+    text-decoration: none;
+}
+
+nav > ul {
+    border-color: #00008b;
+    padding: 10px 0px 0px;
+    border-top-style: solid;
+    text-align: right;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: none;
+}
+
+nav > ul > li a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #6495ed;
+    border-bottom-right-radius: 1em;
+    color: black;
+}
+
+nav > ul > li:hover >a {
+    background-color: aqua;
+    transition: background 0.3s;
+}
+
+nav > ul > li + li + li + li {
+    display: inline-block;
+    padding: none;
+}
+
+nav > ul > li + li + li + li a {
+    text-decoration: none;
+    padding: 10px;
+    border-bottom-right-radius: 1em;
+    background-color: #ffa500;
+    color: black;
+}
+
+nav > ul > li > div {
+    display: none;
+}
+
+nav > ul > li:hover> div {
+    display: inline-block;
+    padding: 10px;
+    position: absolute;
+    top: 3.6em;
+    right: 12.5em;
+    background-color: #6495ed;
+    border-radius: 1em 0em 1em 1em;
+}
+
+nav > ul > li + li:hover > div {
+    position: absolute;
+    top: 3.6em;
+    right: 9em;
+    border-radius: 1em 0em 1em 1em;
+}
+
+nav > ul > li + li + li:hover > div {
+    position: absolute;
+    top: 3.6em;
+    right: 5.7em;
+}
+
+nav > ul > li > div > ul > li a {
+    padding: 0;
+}
+
+nav > ul > li > div > ul > li {
+    margin: 10px 0;
+    display: block;
+}
+
+nav > ul > li > div > ul > li a {
+    color: aliceblue;
+}
+
+nav > ul > li > div > ul > li a:hover {
+    margin: 2px;
+    padding: 5px;
+    background-color: royalblue;
+    transition: background 0.5s;
+    border-radius: 0.5em;
+}
+
+strong {
+    font-size: 0.7em;
+}
+
+#infobulle {
+    display: none;
+}
+
+img:hover + span {
+    display: inline-block;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 0.5em;
+    margin-left: 43%;
+    margin-top: 1em;
+    border-color: red;
+    border-style: solid;
+}
+
+table:first-child {
+    background: white;
+    /* pour mettre la légende en bas */
+    caption-side: bottom;
+    border-radius: 0.5em;
+    box-shadow: 4px 4px 0px #b4ac9c;
+}
+
+table:first-child > caption {
+    margin-top: 0.9em;
+    /* police particulière */
+    font-variant: small-caps;
+    color: gray;
+}
+
+table:first-child > thead {
+    color: aliceblue;
+    text-align: center;
+}
+
+table:first-child > thead > tr {
+    background-color: salmon;
+}
+
+h2 + ol > li > table:first-child > thead > tr > th:first-child {
+    border-radius: 0.5em 0 0 0;
+}
+
+table:first-child > thead > tr > th:last-child {
+    border-radius: 0 0.5em 0 0;
+}
+
+table:first-child > thead > tr > th {
+    padding: 3px;
+}
+
+
+/* selectionne seulement la première lettre */
+
+table:first-child > thead > tr > th::first-letter {
+    color: #ffe8c9;
+}
+
+table:first-child > tbody > tr {
+    color: black;
+}
+
+table:first-child > tbody > tr {
+    text-align: center;
+}
+
+h2 + ol > li > table:first-child > tbody > tr > td:nth-child(1) {
+    /* grosseur du texte (caractère de plus en plus gars */
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+table:first-child > tbody > tr > td:nth-child(2) {
+    text-align: left;
+    font-style: oblique;
+}
+
+table:first-child > tbody > tr:nth-child(odd) {
+    background-color: #f8ebd7;
+}
+
+table:first-child > tbody > tr:nth-child(even) {
+    background-color: #fff8dc;
+}
+
+table:first-child > tbody > tr > td:nth-child(4)::before {
+    content: "✆ ";
+    color: #e9cea8;
+    font-size: 1.5em;
+}
+
+table:first-child > tbody > tr > td:first-child::first-letter {
+    color: #b42d2c;
+}
+
+table:first-child > tbody > tr > td {
+    padding: 0 5px;
+}
+
+table:first-child > tbody > tr > td:last-child {
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+table:nth-child(2) {
+    border: none;
+    border-spacing: 0;
+}
+
+table:nth-child(2) > tbody > tr > td {
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    text-align: center;
+    color: black;
+}
+
+table:nth-child(2) > tbody > tr:last-child > td {
+    width: 100px;
+    height: 50px;
+}
+
+table:nth-child(2) > tbody > tr:last-child > td {
+    background-color: #110027;
+}
+
+table:nth-child(2) > tbody > tr + tr > td + td + td {
+    background-color: #110027;
+}
+
+table:nth-child(2) > tbody > tr:first-child > td:first-child {
+    color: white;
+    background-color: blue;
+}
+
+table:nth-child(2) > tbody > tr:first-child > td + td {
+    background-color: red;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(2) > td:first-child {
+    background-color: pink;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(2) > td:nth-child(2) {
+    background-color: green;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(3) > td:first-child {
+    background-color: yellow;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(4) > td:first-child {
+    background-color: orange;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(4) > td:nth-child(2) {
+    background-color: gray;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(5) > td:first-child {
+    background-color: purple;
+}
+
+table:nth-child(2) > tbody > tr:first-child > td:nth-child(3) {
+    background-color: #110027;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(3) > td:nth-child(2) {
+    background-color: #110027;
+}
+
+table:nth-child(2) > tbody > tr:nth-child(5) > td:nth-child(2) {
+    background-color: #110027;
+}
+
+#imagesectorisees {
+    display: block;
+    margin-top: -250px;
+    margin-left: -330px;
+    margin-bottom: -250px;
+    transform: scale(40%);
+}
+
+form {
+    background-color: #d3d3d3;
+    padding: 5px;
+    display: block;
+    max-width: 400px;
+    width: 80%;
+    border-style: solid;
+    border-color: white;
+    margin: auto;
+    margin-top: 10px;
+}
+
+form > div {
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0.5em;
+    display: block;
+    box-shadow: 0px 0px 10px black;
+    padding: 10px;
+    margin: 10px
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset > p {
+    border: none;
+    font-variant: small-caps;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+}
+
+fieldset::first-letter {
+    color: #6996ed;
+    font-size: 1.1em
+}
+
+fieldset abbr {
+    color: gray;
+}
+
+fieldset > input {
+    background-color: lightgray;
+    border-style: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-bottom-color: white;
+    border-right-color: white;
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+fieldset > textarea {
+    background-color: lightgray;
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: gray;
+    border-left-color: gray;
+    border-bottom-color: white;
+    border-right-color: white;
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+#comm {
+    text-align: center;
+}
+
+#comm > input {
+    background-color: #6495ed;
+    border-style: solid;
+    border-radius: 1em;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: gray;
+    border-right-color: gray;
+    padding: 5px 15px;
+    color: white;
+    width: auto;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    background: grey;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+#all_curseur {
+    width: 100%;
+    font-weight: bolder;
+    color: black;
+}
+
+#all_curseur > abbr {
+    font-weight: bolder;
+    color: black;
+    position: relative;
+    top: 3px
+}
+
+#curseur {
+    display: inline-block;
+    width: 90%;
+    padding: 0px 3px 5px 0px;
+    background-color: lightgray;
+    border-radius: 0.5em;
+}

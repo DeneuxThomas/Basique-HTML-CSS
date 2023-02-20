@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* On change la couleur de fond */
+    background-color: black;
+}
+
+main {
+    /* Le main mettre la couleur de fond à 80% de la largeur de la page avec un minimum de 500px de large et un maximum de 1000px*/
+    background-color: #110027;
+    /* Va prendre 80% de l'écran avec une largeur minimal de 500 pixels à 1000 pixels */
+    min-width: 500px;
+    max-width: 1000px;
+    width: 80%;
+    /* Ajoute un cadre invisible */
+    border-style: hidden;
+    /* Cadre arrondis */
+    border-radius: 15px;
+    /* Définit les marges gauche et basse intérieur */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+p {
+    /* On met la couleur au paragraphe */
+    color: #87CEFA;
+    /* Définit des 4 marges extérieurse */
+    margin: 10px;
+}
+
+h1 {
+    /* On veut mettre un cadre coloré au titre. */
+    border-color: darkviolet;
+    /* Par défaut, le cadre est invisible ; on le rend visible. */
+    border-style: double;
+    /* Cadre arrondis */
+    border-radius: 10px;
+    /* On centre le texte dans le cadre. */
+    text-align: center;
+    /* Change la couleur */
+    color: lavender;
+    /* Va prendre 80% de l'écran */
+    width: 80%;
+    /* centrer horizontalemnt */
+    margin: 0 auto;
+    /* Une marge manimale horizontal de 20px */
+    max-width: calc(100% - 40px);
+}
+
+
+/* Change la couleur du titre quand on le survole avec la souris*/
+
+h1:hover {
+    color: red;
+}
+
+h2 {
+    /* On change la couleur des sous-titres  */
+    color: #FF007D;
+    /* Règle l'espace au dessus dans la marge intérieure des titre h2 */
+    padding-top: 15px;
+    /* souligne le texte */
+    text-decoration: underline;
+    /* modifie l'espace entre le texte et le soulignement*/
+    text-underline-offset: 1px;
+}
+
+h3 {
+    /* On change la couleur des sous-sous-titre */
+    color: cornflowerblue;
+}
+
+div > h3 {
+    /* Centre le texte */
+    text-align: center;
+    /* Change la couleur */
+    color: #87CEFA;
+    /* Définit la marges haute intérieur */
+    padding-top: 35px;
+    /* Change la taille du texte */
+    font-size: 25px;
+    /* souligne le texte */
+    text-decoration: underline;
+    /* modifie l'espace entre le texte et le soulignement*/
+    text-underline-offset: 1px;
+}
+
+ul {
+    /* On change de couleur les listes  */
+    color: #FAEAFF;
+}
+
+em {
+    /* On change la couleur dans écriture en italique  */
+    color: white;
+}
+
+ol {
+    /* On change de couleur la numérotation */
+    color: darkviolet;
+    /* Définition des 4 marges extérieurse */
+    margin: 10px;
+}
+
+footer {
+    /* On change la couleur du bas de page */
+    color: darkviolet;
+}
+
+pre {
+    /* On change la couleur du pre code */
+    color: darkorange;
+    /* Indication sur la façon de gérer le dépassement d'une ligne et des sauts de lignes */
+    white-space: pre-wrap;
+}
+
+
+/* Les éléments <a> avec un href qui correspond sont vert */
+
+[href^="https://www"] {
+    color: mediumslateblue;
+}
+
+
+/* Les éléments <a> avec un href qui correspond sont violet clair */
+
+[href^="/R102/index.html"] {
+    color: pink;
+}
+
+
+/* Les éléments <a> avec un href qui correspond sont rose fluo */
+
+[href*="thomas.deneux&#x40;etu.unice.fr"] {
+    color: deeppink;
+}
+
+
+/* Met dans les citations avant et apres des guillemets et les colors en rose */
+
+q::after {
+    content: " »";
+    color: hotpink;
+}
+
+q::before {
+    content: "« ";
+    color: hotpink;
+}
+
+
+/* Color le fond d'une citation */
+
+q {
+    background-color: darkslateblue;
+}
+
+footer {
+    /* Définit la marges basse extérieure */
+    margin-top: 10px;
+}
+
+img {
+    /* Cadre arrondis */
+    border-radius: 15px;
+    /* On change de modèle de boîte. */
+    display: block;
+    /* On centre la boîte. */
+    margin: auto;
+    box-shadow: 12px 7px 5px #380060;
+}
+
+nav > ul {
+    border-color: #00008b;
+    padding: 10px 0px;
+    border-top-style: solid;
+    text-align: right;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: none;
+}
+
+nav > ul > li a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #6495ed;
+    border-bottom-right-radius: 1em;
+    color: black
+}
+
+nav > ul > li:hover >a {
+    background-color: aqua;
+}
+
+nav > ul > li + li + li + li {
+    display: inline-block;
+    padding: none;
+}
+
+nav > ul > li + li + li + li a {
+    text-decoration: none;
+    padding: 10px;
+    border-bottom-right-radius: 1em;
+    background-color: #ffa500;
+    color: black;
+}
+
+nav > ul > li > span {
+    display: none;
+}
+
+nav > ul > li:hover> span {
+    display: inline-block;
+    position: relative;
+}

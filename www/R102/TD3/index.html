@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Partie obligatoire -->
+    <meta charset='utf-8' />
+    <title>TD3</title>
+    <!-- Partie facultative -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content='TD3' />
+    <meta name='author' content='T. Deneux' />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" /> </head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../TD1/index.html" target='_self'>TD1</a>
+                    <div class="infobulle">
+                        <ul>
+                            <li><a href="../TD1/index.html#partie1.1">Les balises de texte</a></li>
+                            <li><a href="../TD1/index.html#partie1.2">Insertion d'une image</a></li>
+                            <li><a href="../TD1/index.html#partie1.3">Créer des liens</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../TD2/index.html" target='_self'>TD2</a>
+                    <div class="infobulle">
+                        <ul>
+                            <li><a href="../TD2/index.html#partie2.1">Un premier exemple</a></li>
+                            <li><a href="../TD2/index.html#partie2.2">Feuilles de styles en cascade</a></li>
+                            <li><a href="../TD2/index.html#partie2.3">Combiner des sélecteurs</a></li>
+                            <li><a href="../TD2/index.html#partie2.4">Les sélecteurs d'attributs</a></li>
+                            <li><a href="../TD2/index.html#partie2.5">Les pseudo-classes et pseudo-éléments</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../TD3/index.html" target='_self'>TD3</a>
+                    <div class="infobulle">
+                        <ul>
+                            <li><a href="../TD3/index.html#partie3.1">Principes de base d'un traitement de texte</a>
+                                <li><a href="../TD3/index.html#partie3.2">Marges et bordures</a></li>
+                                <li><a href="../TD3/index.html#partie3.3">Changer de type de boîte</a></li>
+                                <li><a href="../TD3/index.html#partie3.4">Modes de positionnement</a></li>
+                                <li><a href="../TD3/index.html#partie3.5">Éléments flottants</a></li>
+                                <li><a href="../TD3/index.html#partie3.6">Couches successives</a></li>
+                                <li><a href="../TD3/index.html#partie3.7">Vos boîtes sont-elles étanches ?</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="../a_propos.html" target='_self'>À <strong>PROPOS</strong></a>
+                        <div class="infobulle">
+                            <ul>
+                                <li>Qui suis-je ?</li>
+                            </ul>
+                        </div>
+                    </li>
+            </ul>
+        </nav>
+        <h1>TD3</h1> </header>
+    <main>
+        <h2>I Le modèle de boîte</h2>
+        <h3 id="partie3.1">I.2 Principes de base d'un traitement de texte</h3>
+        <ol>
+            <li><em>Il y a cependant une différence notable, dès l'origine, entre un traitement de texte classique et un moteur de rendu HTML : c'est la notion de page. Quelle est la différence ? Quelles en sont les conséquences ? (Créez un fichier web/TD3/td3.html pour répondre).</em>
+                <p>La différence entre un traitement classique et un moteur de rendu HTML est que le rendu va fonctionne par ligne et se dirige celon l'axe principal. Il va creer une boîte par caractère puis par suite de caractère séparent par un espace (un mot) enfin il créer une boîte de toute cette ligne et se déplace d'un sur l'axe secondaire et refais la même chose sachant qu'il peut regrouper ces lignes pour créer un paragraphe et donc un nouvelle boîte par dessus. En tout il y a 4 boîtes qui se susperposent. Le traitement classique lui va juste créer une boîte pour chaque caractère. L'avantage du rendu css c'est qu'il va pouvoir des boîtes plus facilement car mieux agencé (il peut déplcer tout une ligne ou un mot au lieu de le faire caractère par caractère).</p>
+            </li>
+        </ol>
+        <h3 id="partie3.2">I.4 Marges et bordures</h3>
+        <ol>
+            <li><em>Si j'écris la règle CSS suivante : que va-t-il se passer (en supposant que h1 ne soit pas ciblé par une autre règle) ? Et pourquoi ?</em>
+                <p>Il ne rien se passer car les borders ne sont pas affichées donc invisible</p>
+            </li>
+            <li><em>Quels avantages y a-t-il à utiliser une taille absolue ? Une taille relative ?</em>
+                <p>Les taille absolue va permettre à un de mettre la balise à une taille fixe qui sera la même peut importe le support (ordinateur, téléphone...) alors que la taille relative va s'adapter et sera proportionnel à la taille de l'écran.</p>
+            </li>
+            <li><em>À quoi correspond l'unité em ? Et la nouvelle unité rem ?</em>
+                <p>L'unité em est simplement la taille de la police de caractères et donc si d'autres éléments utilisent l'unité em, elle va dépendre de la police de caractère. D'après le site W3C <q>Le rem (pour "root em") est la taille de la police de caractères dans l'élément racine du document. Contrairement au em, qui peut être différent pour chaque élément, le rem est constant tout au long du document.</q></p>
+            </li>
+            <li><em>Expliquez le principe des nouvelles unités vh et vw et leur intérêt.</em>
+                <p>Le vw équivaut à 1/100e de la largeur de la fenêtre et le vh équivaut à 1/100e de sa hauteur. Ce qui peut être utile si on veut spécifier des tailles relatives à la fenêtre du lecteur.</p>
+            </li>
+        </ol>
+        <h3 id="partie3.3">I.5 Changer de type de boîte</h3>
+        <ol>
+            <li><em>Créez dans un fichier TD3/galerie.html une galerie de photos, puis mettez un lien vers cette galerie dans TD3/index.html.</em>
+                <p><a href="../TD3/galerie.html" target='_self'>Lien vers la galerie</a></p>
+            </li>
+            <li><em>Modifiez la page td3.html pour avoir en haut de la page un menu horizontal permettant d'accéder aux différents TD et à la page a_propos.html.</em>
+                <p>voir en haut de page</p>
+            </li>
+        </ol>
+        <h2>II Placement</h2>
+        <h3 id="partie3.4">II.1 Modes de positionnement</h3>
+        <ol>
+            <li><em>En utilisant les propriétés display et position et la pseudo-classe :hover, créez une classe infobulle dans votre fichier CSS. Utilisez là pour afficher un commentaire lorsque vous survolez les différents élements du menu de td3.html, ainsi que votre photo dans a_propos.html.</em>
+                <p><a href="../a_propos.html" target='_self'>Lien vers le à propos</a></p>
+            </li>
+        </ol>
+        <h3 id="partie3.5">II.2 Éléments flottants</h3>
+        <ol>
+            <li><em>Dans la page web du TD1, faites « flotter » la photo du chien à droite des réponses, avec un légende en-dessous.</em>
+                <p><a href="../TD1/index.html" target='_self'>Lien vers le TD1</a></p>
+            </li>
+        </ol>
+        <h3 id="partie3.6">II.3 Couches successives</h3>
+        <ol>
+            <li><em>Pourquoi DIV #1 est-il devant DIV #4, alors que son z-index est plus faible ?</em>
+                <p>Le DIV #1 ne fait pas partie du même contexte d'empilement. Effectivement le DIV #4 même avec un z-index plus élevé que le DIV #1, il est un enfant du DIV #3 qui a un z-index plus faible que le DIV #1 donc le DIV #1 est au-dessus du DIV #2 qui est au-dessus du DIV #4</p>
+            </li>
+        </ol>
+        <h2>Complément sur les boîtes</h2>
+        <h3 id="partie3.7">III.2 Vos boîtes sont-elles étanches ?</h3>
+        <ol>
+            <li><em>Dans l'exemple précédent, que se passe-t-il si l'on supprime la bordure de main (en pointillés) ? Pourquoi ?</em>
+                <p>Le dessous sera comme "coupé" car les marges ont fusionné verticalement (biensur si il n'y avait pas de texte dans le main et dans le #A tout serai coupé comme vu dans l'exemple du cour). Tout cela à cause du phénomène Margin Collapse</p>
+            </li>
+        </ol><a href="../index.html" target='_self'>Lien vers le menu des TD</a> </main>
+    <footer>Thomas DENEUX</footer>
+</body>
+
+</html>

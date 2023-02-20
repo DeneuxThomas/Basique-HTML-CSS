@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Partie obligatoire -->
+    <meta charset='utf-8' />
+    <title>TD2</title>
+    <!-- Partie facultative -->
+    <meta name='description' content='TD2' />
+    <meta name='author' content='T. Deneux' />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" /> </head>
+
+<body>
+    <header>
+        <h1>TD2</h1> </header>
+    <main>
+        <h2>II Fonctionnement de CSS</h2>
+        <h3>II.2 Un premier exemple</h3>
+        <ol>
+            <li><em>À quoi correspond rgb(120, 56, 13) en hexadécimal ?
+Combien de couleurs chacune de ces trois méthodes (rgb, hexa ou nom de couleur) vous permettent d'obtenir ?
+Comparez en quelques lignes ces méthodes (avantages/inconvénients).</em>
+                <p>(120,56,13) en rgb correspond au code #78380d en hexadécimal.</p>
+                <p>Le rgb et l'hexadécimal contiennent 256<sup>3</sup> donc environ 16 millions de couleur alors que de base en css on peut afficher avec les noms de couleurs 140 couleurs différentes.</p>
+                <p>En hexadécimal après <em>"#"</em> d'après wikipedia <q> les trois valeurs hexadécimales sont directement celle des octets de commande des luminophores </q> ce qui est plus représentatif de ce qui se passe dans la machine alors quand rgb c'est le pourcentage des des trois couleurs primaire (r : rouge, g : green, b : blue) ce qui plus pratique pour les personnes comme les peintres, artiste... qui fond généralement des mélange de couleur. Mais le principale point négatif du rgb et de l'hexadécimal c'est qu'il reste difficile de savoir quelle est la couleur sans avoir de prévisualation. Pour cela les noms de couleurs existe mais on ne peut que mettre un nombre limité de couleur (140).</p>
+            </li>
+        </ol>
+        <h3>II.3 CSS : « Feuilles de styles en cascade »</h3>
+        <ol>
+            <li><em>Combien cet arbre a-t-il de nœuds de type ELEMENT ? De type TEXT ?
+Écrire le code HTML correspondant à ce DOM.</em>
+                <p>Cet arbre a 13 nœuds de type TEXT et 16 nœuds de type ELEMENT</p> <pre><code>
+&#x3C;body&#x3E;
+    &#x3C;header&#x3E;
+        &#x3C;h1&#x3E;Les papous&#x3C;/h1&#x3E; &#x3C;/header&#x3E;
+    &#x3C;main&#x3E;
+        &#x3C;selection&#x3E;
+            &#x3C;h2&#x3E;D&#xE9;finition&#x3C;/h2&#x3E;
+            &#x3C;p&#x3E; Les &#x3C;em&#x3E;papous&#x3C;/em&#x3E; sont les habitants de Papouasie. &#x3C;/p&#x3E;
+        &#x3C;/selection&#x3E;
+        &#x3C;selection&#x3E;
+            &#x3C;h2&#x3E;Classification&#x3C;/h2&#x3E;
+            &#x3C;ul&#x3E;
+                &#x3C;li&#x3E;Les papous papa.&#x3C;/li&#x3E;
+                &#x3C;li&#x3E;Les papous pas papa.&#x3C;/li&#x3E;
+            &#x3C;/ul&#x3E;
+        &#x3C;/selection&#x3E;
+    &#x3C;/main&#x3E;
+    &#x3C;footer&#x3E;Site r&#xE9;alis&#xE9;; par &#x3C;i&#x3E;C.Levi-Strauss&#x3C;/i&#x3E; en partenariat avec &#x3C;i&#x3E;A.Franquin&#x3C;/i&#x3E;.&#x3C;/footer&#x3E;
+&#x3C;/body&#x3E;
+</code> </pre> </li>
+        </ol>
+        <h2>V Sélecteurs avancés</h2>
+        <h3>V.1 Combiner des sélecteurs</h3>
+        <ol>
+            <li><em>À faire
+Voici le code HTML du body d'une page web. Quel code CSS peut-on écrire pour, sans toucher au code HTML (pas de classe ou d'identifiant !), mettre un fond rouge à « châtaignes » et un fond cyan à « couverture » (sans changer le reste) ?</em>
+                <p><a href="../TD2/code_exercice.html" target='_self'>voir résultat du a faire</a></p>
+            </li>
+        </ol>
+        <h3>V.2 Les sélecteurs d'attributs</h3>
+        <ol>
+            <li><em>Proposez une feuille de style qui attribue une couleur différent aux liens selon qu'il s'agisse : d'une adresse mail ; d'un lien vers une page web interne à votre site ; d'un lien vers une page web externe à votre site .</em>
+                <p><a href="../index.html" target='_self'>Lien_vers_le_menu_des_TD</a></p>
+                <p><a href="https://www.google.fr/" target='_blank'>Lien_vers_Google</a></p>
+                <p><a href="thomas.deneux&#x40;etu.unice.fr">Contacter M. DENEUX </a></p>
+            </li>
+        </ol>
+        <h3>V.3 Les pseudo-classes et pseudo-éléments</h3>
+        <ol>
+            <li><em>Changez la couleur de vos titres lorsqu'ils sont survolés avec la souris.
+Quelle est la différence entre p:hover et p :hover ?</em>
+                <p>le p:hover va sélectionner tout se qui se situe dans le paragraphe alors que le p :hover va selectionner les sous-attributs ou balise dans le paragraphe </p>
+            </li>
+            <li><em>Quelle sera la couleur des différents éléments de cette page ? Essayez de le trouver par vous-même avant de tester ce code pour vérifier.
+Pour chaque élément, identifiez les règles qui peuvent potentiellement le concerner et classez-les de la plus forte à la faible, en justifiant (calculez la spécificité de chaque sélecteur CSS pour justifier).</em>
+                <p></p>
+            </li>
+        </ol> <a href="../index.html" target='_self'>Lien_vers_le_menu_des_TD</a> </main>
+    <footer>Thomas DENEUX date</footer>
+</body>
+
+</html>
